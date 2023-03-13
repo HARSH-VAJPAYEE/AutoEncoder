@@ -1,2 +1,8 @@
 # AutoEncoder
-Colorization of old B&amp;W image using  Auto Encoder
+
+![1_38b2M-O5x5TgHtUu-VvmNA](https://user-images.githubusercontent.com/114849354/224637328-e06ba5c9-3e3a-4bdd-ace5-1266f50146ff.gif)
+
+Autoencoders are originally designed for unsupervised machine learning to learn an efficient representatin of an image or other type of data. Autoencoders are composed of two parts, the encoder and the decoder. The encoder, through a series of CNN and downsampling, learns a reduced dimentional representation of the input data. The decoder then, through the use of CNN and upsampling, attempts to regenerate the data from the these representations. If a well-trained decoder is able to regenerated data that is identical or as close as possible to the original input data, then this shows that the encoder was able to successfully find a compressed representation of the orginal input data.
+Traditionally, by using the output of the encoder, autoencoders are used to filter noise, compress data, conduct dimentional reduction, among other things. More recently, however, there is an increased use of the decoder to generate novel data (generative model). Since if a well-trained decoder can generate accurate data from a set of representations, it should be able to generate data from representations it has never seen before. As an example, if the decoder can generate images of "cloud" and "pigs" from their representations, then when given the representation of "cloud+pigs", it should be able to generate pig-shaped clouds. Therefore, applications such as image colorization and style transfer, where the style of one painting is transfer to another, often has autoencoders embedded inside a deep neural network.
+
+Data Set Link : https://www.kaggle.com/datasets/theblackmamba31/landscape-image-colorization
